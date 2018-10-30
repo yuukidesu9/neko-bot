@@ -10,13 +10,13 @@ async def on_ready():
      print("I'm on!")
 
 async def on_message(text):
-     hello_a = "Oh, hi!"
-     hello_b = "Hey there!"
-     hello_c = "Hello!"
-     hello_d = "Hey, what's up?"
-     hello_e = "Hewwo :3"
-     hello_f = "Um... hi?"
-     hellotext = [
+    hello_a = "Oh, hi!"
+    hello_b = "Hey there!"
+    hello_c = "Hello!"
+    hello_d = "Hey, what's up?"
+    hello_e = "Hewwo :3"
+    hello_f = "Um... hi?"
+    hellotext = [
         'Oh, hi!',
         'Hey there! o/',
         'Hello! ^-^',
