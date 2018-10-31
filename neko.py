@@ -7,7 +7,7 @@ client = discord.Client()
 
 @client.event
 async def on_ready():
-     print("I'm on!")
+     print("I'm online, and... ready to... rock?")
 
 async def on_message(text):
     hellotext = [
@@ -27,11 +27,10 @@ async def on_message(text):
     if text.author.id == 'BOT ID':
          return
     else:
-         messagetext = text.content
-         if messagetext.startswith("Hello") or messagetext.startswith("Hey"):
+         if text.content.startswith("Hello") or text.content.startswith("Hey"):
               await client.send_message(random.choice(hellotext))
               return
-         if messagetext == "ping" or messagetext == "Ping":
+         if text.content.startswith("ping") or text.content.startswith("Ping"):
               await client.send_message(random.choice(pongs))
               return
 client.run('NTA2ODg1MzQ3OTk3Nzc3OTIy.DrpEog.fLjlzw02rXw5j68iEZuU7s0ZiI8')
