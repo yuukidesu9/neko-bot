@@ -2,6 +2,7 @@ import asyncio
 import discord
 import random
 import os
+import phrases
 
 client = discord.Client()
 
