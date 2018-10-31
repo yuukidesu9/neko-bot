@@ -22,7 +22,8 @@ async def on_message(text):
         'Pong! ^-^',
         'Um... pong?',
         'Am I supposed to tell \'pong\'...?',
-        'Pong, I... guess?'
+        'Pong, I... guess?',
+    ]  
     if text.author.id == 'BOT ID':
          return
     else:
