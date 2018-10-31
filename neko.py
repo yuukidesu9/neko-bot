@@ -23,7 +23,8 @@ async def on_message(text):
         'Um... pong?',
         'Am I supposed to tell \'pong\'...?',
         'Pong, I... guess?'
-    if(text.author.id == 'BOT ID'): return
+    if text.author.id == 'BOT ID':
+         return
     else:
          messagetext = text.content
          if messagetext.startswith("Hello") or messagetext.startswith("Hey"):
