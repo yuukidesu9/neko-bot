@@ -50,7 +50,8 @@ async def on_message(text):
          return
       #Answering a message:
       else:
-         await client.send_message(text.channel, kernel.respond(message))
+         response = kernel.respond(message.upper())
+         await client.send_message(text.channel, response)
          return
       #Here's the old code:
       #if text.content.startswith("Hello") or text.content.startswith("Hey"):
