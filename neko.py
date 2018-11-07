@@ -16,7 +16,7 @@ rolltext = [
 
 if os.path.isfile("brain.brn"):
    kernel.bootstrap(brainFile = "brain.brn")
-else
+else:
    kernel.bootstrap(learnFiles = "std_startup.xml", commands = "load aiml")
    kernel.saveBrain("brain.brn")
 
@@ -49,7 +49,7 @@ async def on_message(text):
          await client.send_message(text.channel, "I've got a {}...".format(number1))
          await client.send_message(text.channel, "and a {}. Is it good or bad?".format(number2))
          return
-     else:
+      else:
          await client.send_message(text.channel, kernel.respond(text.content))
          return
       #Here's the old code:
