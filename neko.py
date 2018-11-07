@@ -2,7 +2,6 @@ import asyncio
 import discord
 import random
 import os
-import phrases
 import aiml
 
 client = discord.Client()
@@ -27,9 +26,9 @@ async def on_ready():
 
 @client.event
 async def on_message(text):
+   message = text.content
    if text.author == client.user:
       return
-     
    else:
       #Let's put some AIML in here! Also, some roll code!
       #Rolling a d6:
@@ -49,8 +48,9 @@ async def on_message(text):
          await client.send_message(text.channel, "I've got a {}...".format(number1))
          await client.send_message(text.channel, "and a {}. Is it good or bad?".format(number2))
          return
+      #Answering a message:
       else:
-         await client.send_message(text.channel, kernel.respond(text.content))
+         await client.send_message(text.channel, kernel.respond(message))
          return
       #Here's the old code:
       #if text.content.startswith("Hello") or text.content.startswith("Hey"):
