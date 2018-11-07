@@ -1,0 +1,85 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <!-- std-startup.xml -->
+
+    <!-- Category is an atomic AIML unit -->
+    <category>
+
+        <!-- Pattern to match in user input -->
+        <!-- If user enters "LOAD AIML B" -->
+        <pattern>LOAD AIML</pattern>
+
+        <!-- Template is the response to the pattern -->
+        <!-- This learn an aiml file -->
+        <template>
+            <learn>aiml-en/ai.aiml</learn>
+            <learn>aiml-en/astrology.aiml</learn>
+            <learn>aiml-en/atomic.aiml</learn>
+            <learn>aiml-en/badanswer.aiml</learn>
+            <learn>aiml-en/biography.aiml</learn>
+            <learn>aiml-en/bot.aiml</learn>
+            <learn>aiml-en/bot_profile.aiml</learn>
+            <learn>aiml-en/client.aiml</learn>
+            <learn>aiml-en/client_profile.aiml</learn>
+            <learn>aiml-en/computers.aiml</learn>
+            <learn>aiml-en/continuation.aiml</learn>
+            <learn>aiml-en/date.aiml</learn>
+            <learn>aiml-en/default.aiml</learn>
+            <learn>aiml-en/drugs.aiml</learn>
+            <learn>aiml-en/emotion.aiml</learn>
+            <learn>aiml-en/food.aiml</learn>
+            <learn>aiml-en/geography.aiml</learn>
+            <learn>aiml-en/gossip.aiml</learn>
+            <learn>aiml-en/history.aiml</learn>
+            <learn>aiml-en/humor.aiml</learn>
+            <learn>aiml-en/imponderables.aiml</learn>
+            <learn>aiml-en/inquiry.aiml</learn>
+            <learn>aiml-en/interjection.aiml</learn>
+            <learn>aiml-en/iu.aiml</learn>
+            <learn>aiml-en/knowledge.aiml</learn>
+            <learn>aiml-en/literature.aiml</learn>
+            <learn>aiml-en/money.aiml</learn>
+            <learn>aiml-en/movies.aiml</learn>
+            <learn>aiml-en/mp0.aiml</learn>
+            <learn>aiml-en/mp1.aiml</learn>
+            <learn>aiml-en/mp2.aiml</learn>
+            <learn>aiml-en/mp3.aiml</learn>
+            <learn>aiml-en/mp4.aiml</learn>
+            <learn>aiml-en/mp5.aiml</learn>
+            <learn>aiml-en/mp6.aiml</learn>
+            <learn>aiml-en/music.aiml</learn>
+            <learn>aiml-en/neko.aiml</learn>
+            <learn>aiml-en/numbers.aiml</learn>
+            <learn>aiml-en/personality.aiml</learn>
+            <learn>aiml-en/phone.aiml</learn>
+            <learn>aiml-en/pickup.aiml</learn>
+            <learn>aiml-en/politics.aiml</learn>
+            <learn>aiml-en/primeminister.aiml</learn>
+            <learn>aiml-en/primitive-math.aiml</learn>
+            <learn>aiml-en/psychology.aiml</learn>
+            <learn>aiml-en/pyschology.aiml</learn>
+            <learn>aiml-en/reduction.names.aiml</learn>
+            <learn>aiml-en/reduction0.safe.aiml</learn>
+            <learn>aiml-en/reduction1.safe.aiml</learn>
+            <learn>aiml-en/reduction2.safe.aiml</learn>
+            <learn>aiml-en/reduction3.safe.aiml</learn>
+            <learn>aiml-en/reduction4.safe.aiml</learn>
+            <learn>aiml-en/reductions-update.aiml</learn>
+            <learn>aiml-en/religion.aiml</learn>
+            <learn>aiml-en/salutations.aiml</learn>
+            <learn>aiml-en/science.aiml</learn>
+            <learn>aiml-en/sex.aiml</learn>
+            <learn>aiml-en/sports.aiml</learn>
+            <learn>aiml-en/stack.aiml</learn>
+            <learn>aiml-en/stories.aiml</learn>
+            <learn>aiml-en/that.aiml</learn>
+            <learn>aiml-en/update1.aiml</learn>
+            <learn>aiml-en/update_mccormick.aiml</learn>
+            <learn>aiml-en/wallace.aiml</learn>
+            <learn>aiml-en/xfind.aiml</learn>
+            <!-- You can add more aiml files here -->
+            <!--<learn>more_aiml.aiml</learn>-->
+        </template>
+        
+    </category>
+
+</aiml>

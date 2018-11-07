@@ -16,7 +16,7 @@ rolltext = [
 if os.path.isfile("brain.brn"):
    kernel.bootstrap(brainFile = "brain.brn")
 else:
-   kernel.bootstrap(learnFiles = "std_startup.xml", commands = "load aiml")
+   kernel.bootstrap(learnFiles = "std-startup.xml", commands = "load aiml")
    kernel.saveBrain("brain.brn")
 
 @client.event
