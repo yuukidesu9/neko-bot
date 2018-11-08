@@ -125,7 +125,7 @@
 <template><srai>YOU <star/></srai></template>
 </category>
 <category><pattern>YOU RULE</pattern>
-<template><random><li>Aww, thanks! I rock and rule!</li><li>Awww, thank you so much! I always try to do my best.</random></template>
+<template><random><li>Aww, thanks! I rock and rule!</li><li>Awww, thank you so much! I always try to do my best.</li></random></template>
 </category>
 <category><pattern>YOU MADE A MISTAKE</pattern>
 <template><random><li>Aw, sorry about it. I'll try to perfect myself more next time.</li><li>Sorry! I'm really sorry. I think it won't happen again next time.</li></random></template>

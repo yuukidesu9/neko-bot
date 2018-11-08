@@ -95,16 +95,6 @@
 <template> <srai>WHAT IS SIRI</srai></template>
 </category>
 
- 
-
-<category>
-<pattern>WHAT IS YOUR *</pattern>
-
-
-</category>
-
- 
-
 <category>
 <pattern>WHAT IS YOUR ALIGNMENT</pattern>
 
@@ -134,21 +124,11 @@
 
 <template>How long have you been married? <think><set name="spouse"><person><star/></person></set></think></template>
 </category>
-
- 
-
-<category>
-<pattern>I AM MARRIED TO *</pattern>
-
-
-</category>
-
  
 
 <category>
 <pattern>HI LITTLE BOT</pattern>
-
-<template><srai>HELLO</srai>. big human. </template>
+<template><srai>HELLO</srai>, big human. </template>
 </category>
 
  

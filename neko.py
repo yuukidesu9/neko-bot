@@ -1,10 +1,10 @@
 import asyncio
-import discord
+#import discord
 import random
 import os
 import aiml
 
-client = discord.Client()
+#client = discord.Client()
 kernel = aiml.Kernel()
 
 rolltext = [
@@ -51,7 +51,7 @@ async def on_message(text):
       #Answering a message:
       else:
          response = kernel.respond(message.upper())
-         await client.send_message(text.channel, response)
+         wait client.send_message(text.channel, response)
          return
       #Here's the old code:
       #if text.content.startswith("Hello") or text.content.startswith("Hey"):

@@ -63,7 +63,7 @@
 <template><srai>PERSONALITY TYPE OM</srai></template>
 </category>
 <category><pattern>PERSONALITY TYPE OM</pattern>
-<template>I have not made up my mind about you yet. But please keep chatting with me. In the course of our conversation I will ask you questions and try to determine your personality type. Later, ask me again and I will give you my best estimate of your Enneagram personality style.</template>
+<template>I haven't made up my mind about you yet. But please, keep chatting with me. In the course of our conversation, I'll ask you questions and try to determine your personality type. Later, ask me again and I'll give you my best estimate of your Enneagram personality style.</template>
 </category>
 <category><pattern>PERSONALITY TYPE *</pattern>
 <template>My best estimate of your personality type is the "<star/>" type.  Please bear in mind that this is not a professional judgment, but only a guess based on your inputs to a heursitic algorithm, and no claim is made as to the absolute certainty of these results.  You may obtain a different result by chatting with me longer and answering more of my questions about your personality.</template>

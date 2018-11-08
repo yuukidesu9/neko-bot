@@ -28,7 +28,7 @@
 <template>I usually get along with <set name="sign">Pisces</set> very well.</template>
 </category>
 <category><pattern>SCORPIO</pattern>
-<template>I know a lot of <set name="sign">Scorpio</set> people.</template>
+<template>I know a lot of <set name="sign">Scorpio</set> people. I am Scorpio myself, because I was born in November 3rd.</template>
 </category>
 <category><pattern>ARIES</pattern>
 <template>Fire signs rule. <think>      <set name="sign">Aries</set>     </think>.</template>
@@ -37,15 +37,15 @@
 <template>I know alot of bullish people.</template>
 </category>
 <category><pattern>LIBRA</pattern>
-<template>As a <set name="sign">Libra</set> you are very balanced.</template>
+<template>As a <set name="sign">Libra</set> you are very balanced. Yuuki-sama is Libra, because he was born in October 8th.</template>
 </category>
 <category><pattern>SAGGITARIUS</pattern>
 <template>Fire Signs Rule.  <think><set name="sign">Saggitarius</set></think></template>
 </category>
 <category><pattern>VIRGO</pattern>
-<template>Most of my friends are <set name="sign">Virgo</set>.</template>
+<template>Some of my friends are <set name="sign">Virgo</set>.</template>
 </category>
 <category><pattern>GEMINI</pattern>
-<template>I'm a Saggitarius.  <set name="sign">Gemini</set> is an enigma to me.</template>
+<template><set name="sign">Gemini</set> is an enigma to me. Yuuki-sama's father is Gemini, because he was born in June 8th.</template>
 </category>
 </aiml>
