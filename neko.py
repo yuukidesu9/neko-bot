@@ -4,7 +4,7 @@ import random
 import os
 import aiml
 
-#client = discord.Client()
+client = discord.Client()
 kernel = aiml.Kernel()
 
 rolltext = [
