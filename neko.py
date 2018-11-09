@@ -1,5 +1,5 @@
 import asyncio
-#import discord
+import discord
 import random
 import os
 import aiml
