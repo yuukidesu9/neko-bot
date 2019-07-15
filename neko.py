@@ -3,6 +3,8 @@ import discord
 import random
 import os
 import aiml
+import schedule
+import time
 
 client = discord.Client()
 kernel = aiml.Kernel()
@@ -60,4 +62,4 @@ async def on_message(text):
       #if text.content.startswith("ping") or text.content.startswith("Ping"):
       #     await client.send_message(text.channel, random.choice(pongs))
       #     return
-client.run('NTA5ODY4MzQwMzQ5NjMyNTIy.DsdpLw.CxJ4Sv1ysvOMEVdaE0LCmECVkdk')
+client.run(token)
