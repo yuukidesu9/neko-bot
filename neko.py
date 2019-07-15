@@ -13,6 +13,8 @@ import schedule
 import time
 # Well, this here is my settings file. It's private!
 import config
+# Also, some cool phrases :3
+import phrases
 
 kernel = aiml.Kernel()
 bot = telebot.TeleBot(config.tgtoken)
@@ -40,25 +42,33 @@ async def on_ready():
 async def on_message(message):
       if message.author == client.user:
          return
-      #Let's put some AIML in here! Also, some roll code!
-      #Rolling a d6:
-      if (message.content.startswith("/d6")):
+      # Let's put some AIML in here! Also, some more code!
+      # Saying hello:
+      if (message.content.startswith("Hello")):
+         await message.channel.send(random.choice(hellotext))
+         return
+      # Ping... Pong?
+      elif (message.content.startswith("Ping")):
+         await message.channel.send(random.choice(pongs))
+         return
+      # Rolling a d6:
+      elif (message.content.startswith("/d6")):
          number = random.randint(1, 7)
          await message.channel.send(random.choice(rolltext).format(number))
          return
-      #Rolling a d20:
+      # Rolling a d20:
       elif (message.content.startswith("/d20")):
          number = random.randint(1, 21)
          await message.channel.send(random.choice(rolltext).format(number))
          return
-      #Rolling two d20:
+      # Rolling two d20:
       elif (message.content.startswith("/2d20")):
          number1 = random.randint(1, 21)
          number2 = random.randint(1, 21)
          await message.channel.send("I've got a {}...".format(number1))
          await message.channel.send("and a {}. Is it good or bad?".format(number2))
          return
-      #Answering a message:
+      # Answering a message:
       else:
          response = kernel.respond(message.upper())
          await message.channel.send(response)
