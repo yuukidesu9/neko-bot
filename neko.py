@@ -1,3 +1,8 @@
+# Running on Discord
+import discord
+import asyncio
+# ...and on telegram at the same time!
+import telebot
 # For random number fun.
 import random
 # Logging, maybe?
@@ -7,16 +12,12 @@ import aiml
 # For running only on business hours.
 import schedule
 import time
-# Running on telegram...
-from telegram.ext import Updater, CommandHandler
-# ...and Discord at the same time!
-import discord
-import asyncio
 # Well, this here is my settings file. It's private!
 import config
 
 client = discord.Client()
 kernel = aiml.Kernel()
+bot = telebot.TeleBot(config.tgtoken)
 
 rolltext = [
     "I've rolled a {number}.",
@@ -64,5 +65,4 @@ async def on_message(text):
          response = kernel.respond(message.upper())
          await client.send_message(text.channel, response)
          return
-updater = Updater(config.tgtoken)
 client.run(config.discordtoken)

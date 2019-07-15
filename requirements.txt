@@ -1,4 +1,4 @@
 discord.py
 python-aiml
-telegram-python-bot
+pyTelegramBotAPI
 schedule
