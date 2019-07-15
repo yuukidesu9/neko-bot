@@ -1,10 +1,19 @@
-import asyncio
-import discord
+# For random number fun.
 import random
+# Logging, maybe?
 import os
+# For a good chatting.
 import aiml
+# For running only on business hours.
 import schedule
 import time
+# Running on telegram...
+from telegram.ext import Updater, CommandHandler
+# ...and Discord at the same time!
+import discord
+import asyncio
+# Well, this here is my settings file. It's private!
+import config
 
 client = discord.Client()
 kernel = aiml.Kernel()
@@ -34,17 +43,17 @@ async def on_message(text):
    else:
       #Let's put some AIML in here! Also, some roll code!
       #Rolling a d6:
-      if ("d6" in text.content == True):
+      if (text.content == "d6"):
          number = random.randint(1, 7)
          await client.send_message(text.channel, random.choice(rolltext).format(number))
          return
       #Rolling a d20:
-      elif ("d20" in text.content == True):
+      elif (text.content == "d20"):
          number = random.randint(1, 21)
          await client.send_message(text.channel, random.choice(rolltext).format(number))
          return
       #Rolling two d20:
-      elif ("2d20" in text.content == True):
+      elif (text.content == "2d20"):
          number1 = random.randint(1, 21)
          number2 = random.randint(1, 21)
          await client.send_message(text.channel, "I've got a {}...".format(number1))
@@ -55,11 +64,5 @@ async def on_message(text):
          response = kernel.respond(message.upper())
          await client.send_message(text.channel, response)
          return
-      #Here's the old code:
-      #if text.content.startswith("Hello") or text.content.startswith("Hey"):
-      #     await client.send_message(text.channel, random.choice(hellotext))
-      #     return
-      #if text.content.startswith("ping") or text.content.startswith("Ping"):
-      #     await client.send_message(text.channel, random.choice(pongs))
-      #     return
-client.run(token)
+updater = Updater(config.tgtoken)
+client.run(config.discordtoken)
