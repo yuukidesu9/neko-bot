@@ -42,17 +42,17 @@ async def on_message(message):
          return
       #Let's put some AIML in here! Also, some roll code!
       #Rolling a d6:
-      if (message.content.startswith("Roll a d6")):
+      if (message.content.startswith("/d6")):
          number = random.randint(1, 7)
          await message.channel.send(random.choice(rolltext).format(number))
          return
       #Rolling a d20:
-      elif (message.content.startswith("Roll a d20")):
+      elif (message.content.startswith("/d20")):
          number = random.randint(1, 21)
          await message.channel.send(random.choice(rolltext).format(number))
          return
       #Rolling two d20:
-      elif (message.content.startswith("Roll 2d20")):
+      elif (message.content.startswith("/2d20")):
          number1 = random.randint(1, 21)
          number2 = random.randint(1, 21)
          await message.channel.send("I've got a {}...".format(number1))
