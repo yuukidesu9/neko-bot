@@ -1,1 +1,1 @@
-worker: python3 neko.py
+worker: nohup python3 neko.py
