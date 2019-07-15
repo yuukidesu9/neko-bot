@@ -1,6 +1,5 @@
 # Running on Discord
 import discord
-import asyncio
 # ...and on telegram at the same time!
 import telebot
 # For random number fun.
@@ -15,9 +14,9 @@ import time
 # Well, this here is my settings file. It's private!
 import config
 
-client = discord.Client()
 kernel = aiml.Kernel()
 bot = telebot.TeleBot(config.tgtoken)
+client = discord.Client()
 
 rolltext = [
     "I've rolled a {number}.",
@@ -33,36 +32,34 @@ else:
 
 @client.event
 async def on_ready():
-   print("I'm online, and... ready to... rock! Yay!")
-   print("I mean, I'm up and running!")
+      print("I'm online, and... ready to... rock! Yay!")
+      print("I mean, I'm up and running!")
 
-@client.event
-async def on_message(text):
-   message = text.content
-   if text.author == client.user:
-      return
-   else:
+@client.event   
+async def on_message(message):
+      if message.author == client.user:
+         return
       #Let's put some AIML in here! Also, some roll code!
       #Rolling a d6:
-      if (text.content == "d6"):
+      if (message.content.startswith("Roll a d6")):
          number = random.randint(1, 7)
-         await client.send_message(text.channel, random.choice(rolltext).format(number))
+         await message.channel.send(random.choice(rolltext).format(number))
          return
       #Rolling a d20:
-      elif (text.content == "d20"):
+      elif (message.content.startswith("Roll a d20")):
          number = random.randint(1, 21)
-         await client.send_message(text.channel, random.choice(rolltext).format(number))
+         await message.channel.send(random.choice(rolltext).format(number))
          return
       #Rolling two d20:
-      elif (text.content == "2d20"):
+      elif (message.content.startswith("2d20")):
          number1 = random.randint(1, 21)
          number2 = random.randint(1, 21)
-         await client.send_message(text.channel, "I've got a {}...".format(number1))
-         await client.send_message(text.channel, "and a {}. Is it good or bad?".format(number2))
+         await message.channel.send("I've got a {}...".format(number1))
+         await message.channel.send("and a {}. Is it good or bad?".format(number2))
          return
       #Answering a message:
       else:
          response = kernel.respond(message.upper())
-         await client.send_message(text.channel, response)
+         await message.channel.send(response)
          return
 client.run(config.discordtoken)
