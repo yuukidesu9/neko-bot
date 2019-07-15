@@ -68,13 +68,13 @@ async def on_message(message):
 # -------------------------------------------------------- #
 @bot.message_handler(commands=['start'])
 def send_hello(message):
-   bot.send_message(message.chat.id, 'Hewwo! I\'m Yuuma, but you can call me Neko!')
+   bot.send_message(message.chat.id, u'Hewwo! I\'m Yuuma, but you can call me Neko!')
 
 @bot.message_handler(func=lambda message: True, content_types=['text'])
 def answer(message):
    kernel.setPredicate('name', message.chat.first_name, message.chat.id)
    response2 = kernel.respond(message.text.upper(), message.chat.id)
-   bot.reply_to(message, response2)
+   bot.send_message(message.chat.id, response2)
 
 # Run them both!
 bot.polling()
