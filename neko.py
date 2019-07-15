@@ -8,18 +8,19 @@ import random
 import os
 # For a good chatting.
 import aiml
-# For running only on business hours.
-import schedule
-import time
 # Well, this here is my settings file. It's private!
 import config
 # Also, some cool phrases :3
 import phrases
 
+# Initializing our AIML kernel...
 kernel = aiml.Kernel()
+# ...our telegram bot...
 bot = telebot.TeleBot(config.tgtoken)
+# ...and our Discord bot.
 client = discord.Client()
 
+# Some text for roll.
 rolltext = [
     "I've rolled a {number}.",
     "Rolled a {number} right now.",
@@ -28,22 +29,31 @@ rolltext = [
 
 if os.path.isfile("brain.brn"):
    kernel.bootstrap(brainFile = "brain.brn")
+   # Me has brain
 else:
+   # Me has no brain
    kernel.bootstrap(learnFiles = "std-startup.xml", commands = "load aiml")
    kernel.saveBrain("brain.brn")
+   # Me gained brain
+
 # ---------------------------------------------------------- #
 # Here is the Discord part of the code.                      #
 # ---------------------------------------------------------- #
+# Am I ready?
 @client.event
 async def on_ready():
       print("I'm online, and... ready to... rock! Yay!")
       print("I mean, I'm up and running!")
+      # Yes, I am!
+
 @client.event
 async def on_message(message):
+   # Oh, a message!
       if message.author == client.user:
+         # Shucks, I won't talk to myself!
          return
       # Let's put some AIML in here! Also, some more code!
-      # Saying hello:
+      # H-HEWWO?
       if (message.content.startswith("Hello")):
          await message.channel.send(random.choice(phrases.hellotext))
          return
@@ -61,14 +71,14 @@ async def on_message(message):
          number = random.randint(1, 21)
          await message.channel.send(random.choice(rolltext).format(number))
          return
-      # Rolling two d20:
+      # Rolling two d20s:
       elif (message.content.startswith("/2d20")):
          number1 = random.randint(1, 21)
          number2 = random.randint(1, 21)
          await message.channel.send("I've got a {}...".format(number1))
          await message.channel.send("and a {}. Is it good or bad?".format(number2))
          return
-      # Answering a message:
+      # Wait up! I'll answer you!
       else:
          response = kernel.respond(message.upper())
          await message.channel.send(response)
@@ -78,14 +88,16 @@ async def on_message(message):
 # -------------------------------------------------------- #
 @bot.message_handler(commands=['start'])
 def send_hello(message):
-   bot.send_message(message.chat.id, u'Hewwo! I\'m Yuuma, but you can call me Neko!')
+   bot.send_message(message.chat.id, u'Hewwo! UwU\nI\'m Yuuma, but you can call me Neko!')
+   # H-HEWWO?
 
 @bot.message_handler(func=lambda message: True, content_types=['text'])
 def answer(message):
    kernel.setPredicate('name', message.chat.first_name, message.chat.id)
    response2 = kernel.respond(message.text.upper(), message.chat.id)
    bot.send_message(message.chat.id, response2)
+   # Imma answer you!
 
-# Run them both!
+# Run them both at once!
 bot.polling()
 client.run(config.discordtoken)
