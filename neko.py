@@ -29,13 +29,14 @@ if os.path.isfile("brain.brn"):
 else:
    kernel.bootstrap(learnFiles = "std-startup.xml", commands = "load aiml")
    kernel.saveBrain("brain.brn")
-
+# ---------------------------------------------------------- #
+# Here is the Discord part of the code.                      #
+# ---------------------------------------------------------- #
 @client.event
 async def on_ready():
       print("I'm online, and... ready to... rock! Yay!")
       print("I mean, I'm up and running!")
-
-@client.event   
+@client.event
 async def on_message(message):
       if message.author == client.user:
          return
@@ -51,7 +52,7 @@ async def on_message(message):
          await message.channel.send(random.choice(rolltext).format(number))
          return
       #Rolling two d20:
-      elif (message.content.startswith("2d20")):
+      elif (message.content.startswith("Roll 2d20")):
          number1 = random.randint(1, 21)
          number2 = random.randint(1, 21)
          await message.channel.send("I've got a {}...".format(number1))
@@ -62,4 +63,19 @@ async def on_message(message):
          response = kernel.respond(message.upper())
          await message.channel.send(response)
          return
+# -------------------------------------------------------- #
+# And here is the telegram part of our bot.                #
+# -------------------------------------------------------- #
+@bot.message_handler(commands=['start'])
+def send_hello(message):
+   bot.send_message(message.chat.id, 'Hewwo! I\'m Yuuma, but you can call me Neko!')
+
+@bot.message_handler(func=lambda message: True, content_types=['text'])
+def answer(message):
+   kernel.setPredicate('name', message.chat.first_name, message.chat.id)
+   response2 = kernel.respond(message.text.upper(), message.chat.id)
+   bot.reply_to(message, response2)
+
+# Run them both!
+bot.polling()
 client.run(config.discordtoken)
