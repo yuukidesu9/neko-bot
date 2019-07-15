@@ -45,11 +45,11 @@ async def on_message(message):
       # Let's put some AIML in here! Also, some more code!
       # Saying hello:
       if (message.content.startswith("Hello")):
-         await message.channel.send(random.choice(hellotext))
+         await message.channel.send(random.choice(phrases.hellotext))
          return
       # Ping... Pong?
       elif (message.content.startswith("Ping")):
-         await message.channel.send(random.choice(pongs))
+         await message.channel.send(random.choice(phrases.pongs))
          return
       # Rolling a d6:
       elif (message.content.startswith("/d6")):
