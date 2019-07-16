@@ -80,7 +80,7 @@ async def on_message(message):
          return
       # Wait up! I'll answer you!
       else:
-         response = kernel.respond(message.upper())
+         response = kernel.respond(message.lower())
          await message.channel.send(response)
          return
 # -------------------------------------------------------- #
@@ -94,7 +94,7 @@ def send_hello(message):
 @bot.message_handler(func=lambda message: True, content_types=['text'])
 def answer(message):
    kernel.setPredicate('name', message.chat.first_name, message.chat.id)
-   response2 = kernel.respond(message.text.upper(), message.chat.id)
+   response2 = kernel.respond(message.text.lower(), message.chat.id)
    bot.send_message(message.chat.id, response2)
    # Imma answer you!
 
