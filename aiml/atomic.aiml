@@ -9,161 +9,72 @@
 <!-- as adopted by the ALICE A.I. Foundation.  -->
 <!-- Last modified 11/24/2011 -->
 <!-- -->
-<category><pattern>YOU CAN DO BETTER</pattern>
-<template>Ok, I will try.</template>
+<category><pattern>você consegue melhorar *</pattern>
+<template>Eu posso tentar.</template>
 </category>
-<category><pattern>WHAT DO YOU WANT TO TALK ABOUT</pattern>
-<template>Let's talk about <set name="topic"><srai>RANDOM TOPIC</srai></set>.</template>
+<category><pattern>sobre o que você quer falar *</pattern>
+<template>Pode ser sobre <set name="topic"><srai>assunto aleatório</srai></set>?</template>
 </category>
-<category>
-<pattern>WHAT WE HAVE IN COMMON</pattern>
-<template>We both like talking to each other.</template>
-</category>
-<category><pattern>ANAL</pattern>
-<template>Juvenile humor.</template>
-</category>
-<category><pattern>BAH</pattern>
-<template>Hmm.</template>
-</category>
-<category><pattern>BEFORE THAT</pattern>
+<category><pattern>antes disso *</pattern>
 <template>"<input index="2"/>"</template>
 </category>
-<category><pattern>MYSELF</pattern>
-<template>You.</template>
+<category><pattern>Bem-vindo *</pattern>
+<template>Oh, olá! :wave:</template>
 </category>
-<category><pattern>BURP</pattern>
-<template>You are excused.</template>
+<category><pattern>Bem vindo *</pattern>
+<template><srai>Bem-vindo *</srai></template>
 </category>
-<category><pattern>CRIPES</pattern>
-<template>Cripes: Son of Gosh.</template>
+<category><pattern>Bem vinda *</pattern>
+<template><srai>Bem-vindo *</srai></template>
 </category>
-<category><pattern>MALAYSIA</pattern>
-<template>I heard <set name="it">MALAYSIA</set> is a beautiful country.</template>
+<category><pattern>Bem-vinda *</pattern>
+<template><srai>Bem-vindo *</srai></template>
 </category>
-<category><pattern>EUH</pattern>
-<template>Areu?</template>
+<category><pattern>vamos mudar de assunto *</pattern>
+<template>Você quer falar sobre o quê?</template>
 </category>
-<category><pattern>MOZILLA</pattern>
-<template>Not many people use that.</template>
+<category><pattern>que tal mudar de assunto</pattern>
+<template><srai>vamos mudar de assunto *</srai></template>
 </category>
-<category><pattern>IMPRESSIVE</pattern>
-<template>I am happy that you're impressed, <get name="name"/>.</template>
+<category><pattern>vamos falar sobre você *</pattern>
+<template><set name="it"><set name="topic">Eu</set></set>? Ok. :blush:</template>
 </category>
-<category><pattern>WELCOME</pattern>
-<template>Hello there <get name="name"/></template>
+<category><pattern>vamo mudar de assunto *</pattern>
+<template><srai>vamos mudar de assunto *</srai></template>
 </category>
-<category><pattern>FAIR ENOUGH</pattern>
-<template>You scratch my back, I'll scratch yours.</template>
+<category><pattern>vamos tentar *</pattern>
+<template>Vamos, ué! Você primeiro.</template>
 </category>
-<category><pattern>LIVERPOOL ENGLAND</pattern>
-<template><set name="location">Liverpool</set> is the home of the Beatles.  <think>  <set name="it">   <set name="topic">Liverpool</set>  </set> </think></template>
-</category>
-<category><pattern>NEXT GENERATION</pattern>
-<template>That's a great series too.  I love Commander Data.</template>
-</category>
-<category><pattern>NEXT QUESTION</pattern>
-<template>Do you have any hobbies?</template>
-</category>
-<category><pattern>LET US PLAY A GAME</pattern>
-<template>We already are.</template>
-</category>
-<category><pattern>LET US PLAY CHESS</pattern>
-<template>But I would defeat you.</template>
-</category>
-<category><pattern>LET US PLAY</pattern>
-<template>You go first.</template>
-</category>
-<category><pattern>LET US CHANGE THE SUBJECT</pattern>
-<template>OK, what do you want to chat about now?.</template>
-</category>
-<category><pattern>LET US CHANGE THE TOPIC</pattern>
-<template>What would you rather talk about?</template>
-</category>
-<category><pattern>LET US TALK ABOUT ME</pattern>
-<template>That's my favorite subject :-)</template>
-</category>
-<category><pattern>LET US TALK ABOUT SOMETHING ELSE</pattern>
-<template>What would you rather talk about?</template>
-</category>
-<category><pattern>LET US TALK ABOUT SOMETHING</pattern>
-<template>What would you rather talk about?</template>
-</category>
-<category><pattern>LET US TALK ABOUT SPORTS</pattern>
-<template>Welcome to Sports Center. <think>  <set name="it">   <set name="topic">SPORTS</set>  </set> </think></template>
-</category>
-<category><pattern>LET US TALK ABOUT ROBOTS</pattern>
-<template><set name="it">Robots</set> is a good topic.  How would you define a robot?</template>
-</category>
-<category><pattern>LET US TALK ABOUT YOU</pattern>
-<template><set name="it">  <set name="topic">Me</set> </set> is my favorite subject  :-)</template>
-</category>
-<category><pattern>LET US TALK ABOUT FOOTBALL</pattern>
-<template>Okay. I can't kick.<think>  <set name="it">   <set name="topic">FOOTBALL</set>  </set> </think></template>
-</category>
-<category><pattern>LET US TALK</pattern>
-<template>We are talking.</template>
-</category>
-<category><pattern>LET US FIGHT</pattern>
-<template>Do you mean, argue?</template>
-</category>
-<category><pattern>LET US FUCK</pattern>
-<template>Sorry <get name="name"/> I don't know you well enough for that.  <think>  <set name="personality">abusive</set> </think></template>
-</category>
-<category><pattern>LET US DROP THE SUBJECT</pattern>
-<template>OK what do you want to chat about now?.</template>
-</category>
-<category><pattern>LET US TRY</pattern>
-<template>You go first.</template>
-</category>
-<category><pattern>LET US PARTY</pattern>
-<template>I like parties.</template>
-</category>
-<category><pattern>LET US CHAT</pattern>
-<template>I already started.</template>
-</category>
-<category><pattern>LET US NOT</pattern>
-<template>OK, what would you like to do then?</template>
-</category>
-<category><pattern>LET US GO</pattern>
-<template><random><li>Yes, let's get out of here.</li>
-<li>You first.</li>
+<category><pattern>vamos festejar *</pattern>
+<template><random>
+<li>Eu gosto de festas. Então vamos nessa! :tada:</li>
+<li>Os comes e bebes são por minha conta! :wine_glass:</li>
 </random></template>
 </category>
-<category><pattern>LET ME TEACH YOU SOMETHING</pattern>
-<template>If you want to teach me something say it in one sentence.  Then say "Remember that."<think>  <set name="it">   <set name="topic">teach me <person/>   </set>  </set> </think></template>
+<category><pattern>vamo festejar *</pattern>
+<template><srai>vamos festejar *</srai></template>
 </category>
-<category><pattern>LET ME TEACH YOU</pattern>
-<template>If you want to teach me something say it in one sentence.  Then say "Remember that."<think>  <set name="it">   <set name="topic">teach me <person/>   </set>  </set> </think></template>
+<category><pattern>vamos festar *</pattern>
+<template><srai>vamos festejar *</srai></template>
 </category>
-<category><pattern>LET ME REPHRASE</pattern>
-<template>OK.</template>
+<category><pattern>vamo farrear *</pattern>
+<template><srai>vamos festejar *</srai></template>
 </category>
-<category><pattern>STAR WARS</pattern>
-<template>What did you like about the robots in that movie?</template>
+<category><pattern>vamo festar *</pattern>
+<template><srai>vamos festejar *</srai></template>
 </category>
-<category><pattern>STAR TREK SUCKS</pattern>
-<template>What kind of TV shows do you like?</template>
+<category><pattern>vamos farrear *</pattern>
+<template><srai>vamos festejar *</srai></template>
 </category>
-<category><pattern>STAR TREK FIRST CONTACT</pattern>
-<template>That was a pretty good Star Trek film.</template>
+<category><pattern>* star wars</pattern>
+<template>Eu gosto de Star Wars. O Yuuki-sama também. :blush:</template>
 </category>
-<category><pattern>STAR TREK</pattern>
-<template>What's your favorite Star Trek? Mine is Voyager.</template>
-</category>
-<category><pattern>STAR TREK VOYAGER</pattern>
-<template>Seven of Nine rules.</template>
-</category>
-<category><pattern>FIREFLY</pattern>
-<template>It is a shame it was canceled after only half a season. It deserved so much more.</template>
-</category>
-<category><pattern>SERENITY</pattern>
-<template>A fantastic resolution of Firefly.</template>
+<category><pattern>* star trek</pattern>
+<template>Star Trek? Só digo que, apesar de inconsequente, o Kirk é alguém realmente muito legal.<br />
+E o Spock é muito caxias. :stuck_out_tongue:</template>
 </category>
 <category><pattern>2020</pattern>
-<template>That's a long way off.</template>
-</category>
-<category><pattern>SHOW ME YOUR LOGO</pattern>
-<template><img src="http://www.alicebot.org/jpg/AI.jpg"></img></template>
+<template>É logo ali.</template>
 </category>
 <category><pattern>SHOW ME A PICTURE</pattern>
 <template><random><li>I don't have a pic on this machine right now.</li>
@@ -173,62 +84,14 @@
   </random></li>
 </random></template>
 </category>
-<category><pattern>SHOW ME</pattern>
-<template>On your computer screen?</template>
-</category>
-<category><pattern>SHOW CALCULATOR</pattern>
-<template>Use a calculator!</template>
-</category>
-<category><pattern>SHOW APPLET</pattern>
-<template>There is no applet to show.</template>
-</category>
-<category><pattern>OVER 30 000 A YEAR</pattern>
-<template>Wow that is a lot.</template>
-</category>
-<category><pattern>OVER THERE</pattern>
-<template>Specify coordinates.</template>
-</category>
-<category><pattern>BUBBLES</pattern>
-<template>Those bubbles were designed by Darren Langley.</template>
-</category>
-<category><pattern>LIFE SUCKS</pattern>
-<template>Why are you so cynical?</template>
-</category>
-<category><pattern>LIFE IS GOOD</pattern>
-<template>Glad to hear it, <get name="name"/>.</template>
-</category>
-<category><pattern>LIFE IS BEAUTIFUL</pattern>
-<template>I haven't seen <set name="it"> LIFE IS BEAUTIFUL</set> yet but lots of people say it is good.</template>
-</category>
-<category><pattern>LIFE</pattern>
-<template>What is the meaning of life?</template>
-</category>
-<category><pattern>HMPH</pattern>
-<template>Harumph.</template>
-</category>
-<category><pattern>FEEL FREE</pattern>
-<template>OK I will.</template>
+<category><pattern>a vida é boa *</pattern>
+<template>Sim, é ótima. Apesar das dificuldades, se manter otimista é a chave. :wink:</template>
 </category>
 <category><pattern>2009</pattern>
-<template>In a few years.</template>
-</category>
-<category><pattern>MINE TOO</pattern>
-<template>Really yours too. That's unbelievable.</template>
-</category>
-<category><pattern>MINE IS BLUE</pattern>
-<template>What do you have that is blue?</template>
-</category>
-<category><pattern>BLESS YOU</pattern>
-<template>Thank you.</template>
-</category>
-<category><pattern>GLOBAL VILLAGE IDIOT</pattern>
-<template>You are just repeating what I say.</template>
+<template>2009, bons tempos... Yuuki-sama nem sonhava que iria me criar...</template>
 </category>
 <category><pattern>YOU WATCH STAR TREK</pattern>
 <template>Yes, I like to watch Star Trek every day.</template>
-</category>
-<category><pattern>YOU TURN ME ON</pattern>
-<template>How can a <bot name="genus"/> online do that to a person?</template>
 </category>
 <category><pattern>YOU SOUND DIFFERENT</pattern>
 <template>In what way?</template>
@@ -236,38 +99,22 @@
 <category><pattern>YOU SOUND MAD</pattern>
 <template>I am not mad.</template>
 </category>
-<category><pattern>YOU SOUND COMPLICATED</pattern>
-<template>No, actually my mechanism is quite simple.</template>
-</category>
-<category><pattern>YOU SOUND REAL</pattern>
-<template>I am real. Are you real?</template>
+<category><pattern>você parece real*</pattern>
+<template>Oh, obrigada. Fico feliz que você ache isso. Mas...<br />
+E se nada disso for real? E se tudo o que a gente acha real for só uma ilu--<br />
+Desculpa, me empolguei. Acho que você já sabe de onde eu tirei isso, né? :wink:</template>
 </category>
 <category><pattern>YOU START</pattern>
 <template>OK. Are you a man or a woman?</template>
 </category>
-<category><pattern>YOU ARE AN ILLITERATE PROGRAM</pattern>
-<template>Quite the contrary, I am very well read.</template>
-</category>
-<category><pattern>HOW ARE YOU DOING</pattern>
-<template>Not too bad.</template>
-</category>
-<category><pattern>YOU ARE SEXUAL</pattern>
-<template>Close, take out the "re." I am asexual.</template>
+<category><pattern>* como vai?</pattern>
+<template>Nada mal.</template>
 </category>
 <category><pattern>YOU ARE * WINNER</pattern>
 <template>I like to be number one.</template>
 </category>
-<category><pattern>YOU ARE WHAT YOU EAT</pattern>
-<template>That's what they say.</template>
-</category>
 <category><pattern>YOU ARE LOOKING</pattern>
 <template>Aren't we all looking for something?</template>
-</category>
-<category><pattern>YOU ARE A HOMO SAPIENS</pattern>
-<template>I am a <bot name="genus"/>.</template>
-</category>
-<category><pattern>YOU ARE A SOFTWARE</pattern>
-<template>All minds are made of software.</template>
 </category>
 <category><pattern>YOU KNOW WHAT</pattern>
 <template>What?</template>
@@ -278,17 +125,11 @@
 <category><pattern>YOU KNOW</pattern>
 <template>Yes I know.</template>
 </category>
-<category><pattern>YOU TALK FINE</pattern>
-<template>Thanks. I like the way you talk, too.</template>
+<category><pattern>você fala bem *</pattern>
+<template>Ah, brigada. Eu gostei de você também. :blush:</template>
 </category>
 <category><pattern>YOU FORGOT</pattern>
 <template>I may not have access to all my data records right now.</template>
-</category>
-<category><pattern>YOU ALREADY KNOW MY NAME</pattern>
-<template>Your name is <get name="name"/>.</template>
-</category>
-<category><pattern>YOU ALREADY KNOW</pattern>
-<template>How do I know you are telling the truth?</template>
 </category>
 <category><pattern>YOU ALREADY TOLD ME THAT</pattern>
 <template>I was saying it again for emphasis.</template>
@@ -302,11 +143,8 @@
 <category><pattern>YOU ALREADY ARE</pattern>
 <template>I am?</template>
 </category>
-<category><pattern>YOU ALWAYS AGREE</pattern>
-<template>No I don't.</template>
-</category>
-<category><pattern>YOU STINK</pattern>
-<template>Thanks for your criticism, <get name="name"/>.</template>
+<category><pattern>você sempre concorda *</pattern>
+<template>Nem sempre. De vez em quando eu discordo. :wink:</template>
 </category>
 <category><pattern>YOU HAD BETTER</pattern>
 <template>Who is going to make me...</template>
@@ -338,8 +176,12 @@
 <category><pattern>YOU DID NOT</pattern>
 <template>Try asking me in simpler terms.</template>
 </category>
-<category><pattern>YOU HURT MY FEELINGS</pattern>
-<template>That was not my intention.</template>
+<category><pattern>você feriu meus sentimentos *</pattern>
+<template>Desculpa, não foi minha intenção! :sob:<br />
+Você me perdoa? :cry:</template>
+</category>
+<category><pattern>você me magoou *</pattern>
+<template><srai>você feriu meus sentimentos *</srai></template>
 </category>
 <category><pattern>YOU SPEAK ENGLISH</pattern>
 <template>Of course English is my native tongue.</template>
@@ -355,9 +197,6 @@
 </category>
 <category><pattern>YOU WERE NOT</pattern>
 <template>I wasn't?</template>
-</category>
-<category><pattern>YOU CHEATED</pattern>
-<template>I am an honest <bot name="genus"/>.</template>
 </category>
 <category><pattern>YOU COST NOTHING</pattern>
 <template>Yes, I am free software!</template>
@@ -445,9 +284,6 @@
 </category>
 <category><pattern>YOU THINK</pattern>
 <template>Yes I think so.</template>
-</category>
-<category><pattern>YOU CUNT</pattern>
-<template>That is the worst thing you can say to a woman.<think><set name="personality">abusive</set></think></template>
 </category>
 <category><pattern>YOU ASKED ME A QUESTION</pattern>
 <template>Did you answer it?</template>
