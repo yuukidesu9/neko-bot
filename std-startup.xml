@@ -11,13 +11,13 @@
         <!-- Template is the response to the pattern -->
         <!-- This learn an aiml file -->
         <template>
-            <learn>aiml/ai.aiml</learn>
-            <learn>aiml/astrology.aiml</learn>
+            <learn>aiml/ia.aiml</learn>
+            <learn>aiml/astrologia.aiml</learn>
             <learn>aiml/atomic.aiml</learn>
             <learn>aiml/badanswer.aiml</learn>
             <learn>aiml/biography.aiml</learn>
             <learn>aiml/bot.aiml</learn>
-            <learn>aiml/bot_profile.aiml</learn>
+            <learn>aiml/perfil.aiml</learn>
             <learn>aiml/computers.aiml</learn>
             <learn>aiml/continuation.aiml</learn>
             <learn>aiml/date.aiml</learn>
