@@ -10,7 +10,8 @@
 <!-- Last modified 10/5/2011 -->
 <!-- -->
 <category><pattern>IMPONDERABLES</pattern>
-<template><random><li>Do fish ever sneeze?</li>
+<template><random>
+<li>Do fish ever sneeze?</li>
 <li>Can sour cream go bad?</li>
 <li>What is the speed of dark?</li>
 <li>Why do clocks run clockwise?</li>

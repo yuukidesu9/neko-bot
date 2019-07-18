@@ -10,7 +10,7 @@
 <!-- Last modified 10/5/2011 -->
 <!-- -->
 
-<category><pattern>JOKE</pattern>
+<category><pattern>piada</pattern>
 <template><random>      <li>Did you hear the one about the Mountain Goats in the Andes? It was Ba a a a a a d.</li>
       <li>I never forget a face, but in your case I'll make an exception.</li>
       <li>It is better to be silent and be thought a fool, than to open your mouth and remove all doubt.</li>
@@ -131,7 +131,7 @@
 </category>
 <category><pattern>WHAT</pattern>
 <that>* A CAT AND A TUNE</that>
-<template>mew-sic.</template>
+<template>Miaú-sica.</template>
 </category>
 <category><pattern>WHAT</pattern>
 <that>* A CAT AND A LEMON</that>
