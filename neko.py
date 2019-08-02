@@ -1,7 +1,10 @@
 # Running on Discord
 import discord
-# ...and on telegram at the same time!
+# ...and on telegram...
 import telebot
+# ...at the same time!
+from multiprocessing import Process
+import sys
 # For random number fun.
 import random
 # Logging, maybe?
@@ -15,10 +18,10 @@ import phrases
 
 # Initializing our AIML kernel...
 kernel = aiml.Kernel()
-# ...our telegram bot...
-bot = telebot.TeleBot(config.tgtoken)
-# ...and our Discord bot.
+# ...our Discord bot...
 client = discord.Client()
+# ...and our telegram bot.
+bot = telebot.TeleBot(config.tgtoken)
 
 # Some text for roll.
 rolltext = [
@@ -35,6 +38,14 @@ else:
    kernel.bootstrap(learnFiles = "std-startup.xml", commands = "load aiml")
    kernel.saveBrain("brain.brn")
    # Me gained brain
+
+def rundiscord():
+   client.run(config.discordtoken)
+   #Running our Discord bot.
+
+def runtelegram():
+   bot.polling()
+   #Running our telegram bot.
 
 # ---------------------------------------------------------- #
 # Here is the Discord part of the code.                      #
@@ -84,7 +95,7 @@ async def on_message(message):
          return
       # Wait up! I'll answer you!
       else:
-         response = kernel.respond(message.lower())
+         response = kernel.respond(str(message).lower())
          await message.channel.send(response)
          return
 # -------------------------------------------------------- #
@@ -102,6 +113,10 @@ def answer(message):
    bot.send_message(message.chat.id, response2)
    # Imma answer you!
 
+
 # Run them both at once!
-bot.polling()
-client.run(config.discordtoken)
+if __name__ == "__main__":
+   p1 =Process(target=rundiscord)
+   p1.start()
+   p2 = Process(target=runtelegram)
+   p2.start()
