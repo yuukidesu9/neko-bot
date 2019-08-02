@@ -65,9 +65,9 @@ async def on_message(message):
          return
       # Let's put some AIML in here! Also, some more code!
       # Yay for me!
-      if (message.author == (client.user.name == "YuukiDesu9#6552")):
-         await message.channel.send("Yuuki-sama! \\o/")
-         return
+      #if (message.author == (client.user.id == '291936579847716866')):
+      #   await message.channel.send("Yuuki-sama! \\o/")
+      #   return
       # H-HEWWO?
       if (message.content.startswith("Hello")):
          await message.channel.send(random.choice(phrases.hellotext))
