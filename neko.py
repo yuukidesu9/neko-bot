@@ -106,6 +106,18 @@ def send_hello(message):
    bot.send_message(message.chat.id, u'Hewwo! UwU\nI\'m Yuuma, but you can call me Neko!')
    # H-HEWWO?
 
+@bot.message_handler(commands=['roll-d6'])
+def roll_d6(message):
+   d6 = random.randint(1,7)
+   bot.send_message(message.chat.id, random.choice(rolltext).format(d6))
+   # Rolled a d6.
+
+@bot.message_handler(commands=['roll-d20'])
+def roll_d20(message):
+   d20 = random.randint(1,21)
+   bot.send_message(message.chat.id, random.choice(rolltext).format(d20))
+   # Rolled a d20.
+
 @bot.message_handler(func=lambda message: True, content_types=['text'])
 def answer(message):
    kernel.setPredicate('name', message.chat.first_name, message.chat.id)
