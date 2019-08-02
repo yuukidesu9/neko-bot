@@ -25,18 +25,18 @@ bot = telebot.TeleBot(config.tgtoken)
 
 # Some text for roll.
 rolltext = [
-    "I've rolled a {number}.",
-    "Rolled a {number} right now.",
-    "I've got a {number} here.",
+    'I\'ve rolled a {number}.',
+    'Rolled a {number} right now.',
+    'I\'ve got a {number} here.',
 ]
 
-if os.path.isfile("brain.brn"):
-   kernel.bootstrap(brainFile = "brain.brn")
+if os.path.isfile('brain.brn'):
+   kernel.bootstrap(brainFile = 'brain.brn')
    # Me has brain
 else:
    # Me has no brain
-   kernel.bootstrap(learnFiles = "std-startup.xml", commands = "load aiml")
-   kernel.saveBrain("brain.brn")
+   kernel.bootstrap(learnFiles = 'std-startup.xml', commands = 'load aiml')
+   kernel.saveBrain('brain.brn')
    # Me gained brain
 
 def rundiscord():
@@ -53,8 +53,8 @@ def runtelegram():
 # Am I ready?
 @client.event
 async def on_ready():
-      print("I'm online, and... ready to... rock! Yay!")
-      print("I mean, I'm up and running!")
+      print('I\'m online, and... ready to... rock! Yay!')
+      print('I mean, I\'m up and running!')
       # Yes, I am!
 
 @client.event
@@ -69,29 +69,29 @@ async def on_message(message):
       #   await message.channel.send("Yuuki-sama! \\o/")
       #   return
       # H-HEWWO?
-      if (message.content.startswith("Hello")):
+      if (message.content.startswith('Hello')):
          await message.channel.send(random.choice(phrases.hellotext))
          return
       # Ping... Pong?
-      elif (message.content.startswith("Ping")):
+      elif (message.content.startswith('Ping')):
          await message.channel.send(random.choice(phrases.pongs))
          return
       # Rolling a d6:
-      elif (message.content.startswith("/d6")):
+      elif (message.content.startswith('/d6')):
          number = random.randint(1, 7)
          await message.channel.send(random.choice(rolltext).format(number))
          return
       # Rolling a d20:
-      elif (message.content.startswith("/d20")):
+      elif (message.content.startswith('/d20')):
          number = random.randint(1, 21)
          await message.channel.send(random.choice(rolltext).format(number))
          return
       # Rolling two d20s:
-      elif (message.content.startswith("/2d20")):
+      elif (message.content.startswith('/2d20')):
          number1 = random.randint(1, 21)
          number2 = random.randint(1, 21)
-         await message.channel.send("I've got a {}...".format(number1))
-         await message.channel.send("and a {}. Is it good or bad?".format(number2))
+         await message.channel.send('I\'ve got a {}...'.format(number1))
+         await message.channel.send('and a {}.'.format(number2))
          return
       # Wait up! I'll answer you!
       else:
@@ -106,17 +106,23 @@ def send_hello(message):
    bot.send_message(message.chat.id, u'Hewwo! UwU\nI\'m Yuuma, but you can call me Neko!')
    # H-HEWWO?
 
-@bot.message_handler(commands=['roll-d6'])
+@bot.message_handler(commands=['d6'])
 def roll_d6(message):
-   d6 = random.randint(1,7)
+   d6 = random.randint(1, 7)
    bot.send_message(message.chat.id, random.choice(rolltext).format(d6))
    # Rolled a d6.
 
-@bot.message_handler(commands=['roll-d20'])
+@bot.message_handler(commands=['d20'])
 def roll_d20(message):
-   d20 = random.randint(1,21)
+   d20 = random.randint(1, 21)
    bot.send_message(message.chat.id, random.choice(rolltext).format(d20))
    # Rolled a d20.
+
+@bot.message_handler(commands=['2d20'])
+def roll_2d20(message):
+   d20_1 = random.randint(1, 21)
+   d20_2 = random.randint(1, 21)
+   bot.send_message(message.chat.id, 'I\'ve got a {} '.format(d20_1) + 'and a {}.'.format(d20_2))
 
 @bot.message_handler(func=lambda message: True, content_types=['text'])
 def answer(message):
@@ -127,7 +133,7 @@ def answer(message):
 
 
 # Run them both at once!
-if __name__ == "__main__":
+if __name__ == '__main__':
    p1 =Process(target=rundiscord)
    p1.start()
    p2 = Process(target=runtelegram)
