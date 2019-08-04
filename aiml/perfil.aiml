@@ -79,12 +79,10 @@ Filme favorito: <srai>filme favorito</srai><br />
 Altura: <srai>altura</srai><br />
 Peso: <srai>peso</srai><br />
 Bio: <srai>bio</srai><br />
-Description: <srai>descrição</srai><br />
-Species: <srai>espécie</srai><br />
-Father: <srai>pai</srai><br />
-Mother: <srai>mãe</srai><br />
-Brothers: <srai>irmãos</srai><br />
-Sisters: <srai>irmãs</srai></template>
+Descrição: <srai>descrição</srai><br />
+Espécie: <srai>espécie</srai><br />
+Pai: <srai>pai</srai><br />
+Mãe: <srai>mãe</srai><br />
 </category>
 <category><pattern>irmãs</pattern>
 <template>Sem irmãs</template>
@@ -110,7 +108,7 @@ Sisters: <srai>irmãs</srai></template>
 <category><pattern>data de nascimento</pattern>
 <template>3 de novembro de 2018</template>
 </category>
-<category><pattern>DESCRIPTION</pattern>
+<category><pattern>descrição</pattern>
 <template>Eu fui ativada no Heroku em 3 de novembro de 2018. Meu instrutor e mestre é Yuuki-sama.<br />
 Ele me ensinou a cantar uma música. Quer que eu cante ela pra você?</template>
 </category>
