@@ -15,8 +15,7 @@ import aiml
 import config
 # Also, some cool phrases :3
 import phrases
-# And Twitter integration! Yay!
-import tweepy
+
 
 # Initializing our AIML kernel...
 kernel = aiml.Kernel()
@@ -74,12 +73,12 @@ async def on_message(message):
       # Rolling a d6:
       elif (message.content.startswith('/d6')):
          number = random.randint(1, 7)
-         await message.channel.send(random.choice(rolltext).format(number))
+         await message.channel.send(random.choice(phrases.rolltext).format(number))
          return
       # Rolling a d20:
       elif (message.content.startswith('/d20')):
          number = random.randint(1, 21)
-         await message.channel.send(random.choice(rolltext).format(number))
+         await message.channel.send(random.choice(phrases.rolltext).format(number))
          return
       # Rolling two d20s:
       elif (message.content.startswith('/2d20')):
@@ -104,13 +103,13 @@ def send_hello(message):
 @bot.message_handler(commands=['d6'])
 def roll_d6(message):
    d6 = random.randint(1, 7)
-   bot.send_message(message.chat.id, random.choice(rolltext).format(d6))
+   bot.send_message(message.chat.id, random.choice(phrases.rolltext).format(d6))
    # Rolled a d6.
 
 @bot.message_handler(commands=['d20'])
 def roll_d20(message):
    d20 = random.randint(1, 21)
-   bot.send_message(message.chat.id, random.choice(rolltext).format(d20))
+   bot.send_message(message.chat.id, random.choice(phrases.rolltext).format(d20))
    # Rolled a d20.
 
 @bot.message_handler(commands=['2d20'])
