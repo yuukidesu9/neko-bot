@@ -1,17 +1,21 @@
 hellotext = [
-    "Oh, hi!",
-    "Hey there! o/",
-    "Hello! ^-^",
-    "Hey, what's up?",
+    "Ah, oi!",
+    "Olá! o/",
+    "Oi! ^-^",
+    "Opa, e aí?",
     "Henllo owo",
-    "Um... hi? '-.-",
+    "Er... oi? '-.-",
 ]
 
 pongs = [
     "Pong! o/",
-    "Um... pong?",
-    "Am I supposed to tell 'pong'...?",
-    "Pong, I... guess?",
+    "Er... pong?",
+    "Eu tenho que dizer 'pong'...?",
+    "Pong, eu... acho?",
 ]
 
-
+rolltext = [
+    'I\'ve rolled a {number}.',
+    'Rolled a {number} right now.',
+    'I\'ve got a {number} here.',
+]

@@ -23,13 +23,6 @@ client = discord.Client()
 # ...and our telegram bot.
 bot = telebot.TeleBot(config.tgtoken)
 
-# Some text for roll.
-rolltext = [
-    'I\'ve rolled a {number}.',
-    'Rolled a {number} right now.',
-    'I\'ve got a {number} here.',
-]
-
 if os.path.isfile('brain.brn'):
    kernel.bootstrap(brainFile = 'brain.brn')
    # Me has brain
