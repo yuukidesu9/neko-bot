@@ -15,6 +15,8 @@ import aiml
 import config
 # Also, some cool phrases :3
 import phrases
+# And Twitter integration! Yay!
+import tweepy
 
 # Initializing our AIML kernel...
 kernel = aiml.Kernel()
