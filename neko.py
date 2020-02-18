@@ -64,34 +64,40 @@ async def on_message(message):
       #   return
       # H-HEWWO?
       if (message.content.startswith('Hello')):
-         await message.channel.send(random.choice(phrases.hellotext))
+         await channel.send(random.choice(phrases.hellotext))
          return
       # Ping... Pong?
       elif (message.content.startswith('Ping')):
-         await message.channel.send(random.choice(phrases.pongs))
+         await channel.send(random.choice(phrases.pongs))
          return
       # Rolling a d6:
       elif (message.content.startswith('/d6')):
          number = random.randint(1, 7)
-         await message.channel.send(random.choice(phrases.rolltext).format(number))
+         await channel.send(random.choice(phrases.rolltext).format(number))
          return
       # Rolling a d20:
       elif (message.content.startswith('/d20')):
          number = random.randint(1, 21)
-         await message.channel.send(random.choice(phrases.rolltext).format(number))
+         await channel.send(random.choice(phrases.rolltext).format(number))
          return
       # Rolling two d20s:
       elif (message.content.startswith('/2d20')):
          number1 = random.randint(1, 21)
          number2 = random.randint(1, 21)
-         await message.channel.send('I\'ve got a {}...'.format(number1))
-         await message.channel.send('and a {}.'.format(number2))
+         await channel.send('I\'ve got a {}...'.format(number1))
+         await channel.send('and a {}.'.format(number2))
          return
+      # Sending from Discord to Telegram:
+      elif (message.content.startswith('$sendtotg')):
+         msgtotg = message.content
+         await postFromDiscord(msgtotg)
+         await channel.send('Message sent to Telegram!')
       # Wait up! I'll answer you!
       else:
          response = kernel.respond(str(message).lower())
-         await message.channel.send(response)
+         await channel.send(response)
          return
+
 # -------------------------------------------------------- #
 # And here is the telegram part of our bot.                #
 # -------------------------------------------------------- #
@@ -124,6 +130,8 @@ def answer(message):
    response2 = kernel.respond(message.text.lower(), message.chat.id)
    bot.send_message(message.chat.id, response2)
    # Imma answer you!
+def postFromDiscord(message):
+   bot.send_message(message.chat.id, message.text)
 
 
 # Run them both at once!
