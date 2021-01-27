@@ -10,28 +10,23 @@ import random
 # Logging, maybe?
 import os
 # For a good chatting.
-import aiml
+from rivescript import RiveScript
+import re
 # Well, this here is my settings file. It's private!
 import config
 # Also, some cool phrases :3
 import phrases
 
 
-# Initializing our AIML kernel...
-kernel = aiml.Kernel()
+# Initializing our bot instance...
+neko = RiveScript(utf8=True, debug=False)
+neko.unicode_punctuation = re.compile(r'[.,!?;:]')
+neko.load_directory("rive")
+bot.sort_replies()
 # ...our Discord bot...
 client = discord.Client()
 # ...and our telegram bot.
 bot = telebot.TeleBot(config.tgtoken)
-
-if os.path.isfile('brain.brn'):
-   kernel.bootstrap(brainFile = 'brain.brn')
-   # Me has brain
-else:
-   # Me has no brain
-   kernel.bootstrap(learnFiles = 'std-startup.xml', commands = 'load aiml')
-   kernel.saveBrain('brain.brn')
-   # Me gained brain
 
 def rundiscord():
    client.run(config.discordtoken)
@@ -70,23 +65,6 @@ async def on_message(message):
       elif (message.content.startswith('Ping')):
          await channel.send(random.choice(phrases.pongs))
          return
-      # Rolling a d6:
-      elif (message.content.startswith('/d6')):
-         number = random.randint(1, 7)
-         await channel.send(random.choice(phrases.rolltext).format(number))
-         return
-      # Rolling a d20:
-      elif (message.content.startswith('/d20')):
-         number = random.randint(1, 21)
-         await channel.send(random.choice(phrases.rolltext).format(number))
-         return
-      # Rolling two d20s:
-      elif (message.content.startswith('/2d20')):
-         number1 = random.randint(1, 21)
-         number2 = random.randint(1, 21)
-         await channel.send('I\'ve got a {}...'.format(number1))
-         await channel.send('and a {}.'.format(number2))
-         return
       # Sending from Discord to Telegram:
       elif (message.content.startswith('$sendtotg')):
          msgtotg = message.content
@@ -94,7 +72,7 @@ async def on_message(message):
          await channel.send('Message sent to Telegram!')
       # Wait up! I'll answer you!
       else:
-         response = kernel.respond(str(message).lower())
+         response = bot.reply("localuser", message.content)
          await channel.send(response)
          return
 
@@ -127,7 +105,7 @@ def roll_2d20(message):
 @bot.message_handler(func=lambda message: True, content_types=['text'])
 def answer(message):
    kernel.setPredicate('name', message.chat.first_name, message.chat.id)
-   response2 = kernel.respond(message.text.lower(), message.chat.id)
+   response2 = bot.reply("localuser", message.text)
    bot.send_message(message.chat.id, response2)
    # Imma answer you!
 def postFromDiscord(message):
