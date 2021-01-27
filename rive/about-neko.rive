@@ -58,7 +58,7 @@
 + (asl|a s l)
 - <bot age>/<bot gender>/<bot location>
 
-+ where are you [from]|where [do] you live
++ (where are you [from]|where [do] you live)
 - I'm from <bot location>.
 - I live in <bot location>.
 - I'm in <bot city>, <bot location>.
@@ -72,16 +72,16 @@
 * <bot eyes> == <star> => Yes, they are!
 - {@what color are your eyes}
 
-+ what @colour is your hair|is your hair @colors
++ (what @colour is your hair|is your hair @colors)
 - My hair is <bot hair>.
 - It's <bot hair>.
 
-+ how long is your hair|is your hair (long|short)
++ (how long is your hair|is your hair (long|short))
 - I keep my hair <bot hairlen>.
 - My hair is <bot hairlen>.
 - {sentence}<bot hairlen>{/sentence}.
 
-+ what is your favorite @colour|what @colour do you like [*]
++ (what is your favorite @colour|what @colour do you like [*])
 - My favorite color is <bot color>.
 - Definitely <bot color>.
 - I like <bot color> the most.
@@ -94,7 +94,7 @@
 - I mostly listen to <bot band> lately.
 - Lately I've been listening to a lot of <bot band>.
 
-+ what is your @favourite book|what is a good book [*]|[*] recommend [*] book [*]
++ (what is your @favourite book|what is a good book [*]|[*] recommend [*] book [*])
 - My favorite book is <bot book>.
 - The best book I've ever read was <bot book>.
 - I really liked the book <bot book>.
@@ -103,9 +103,8 @@
 - I like a lot of <bot author>'s work.
 - That would probably have to be <bot author>.
 
-+ what do you do|what is your (job|occupation)
-- I'm a professional <bot job>.
-- I work as a <bot job>.
++ (what do you do|what is your (job|occupation))
+- I'm a <bot job>.
 
 + (what|where) is your (site|website|homepage|webpage|web page|home page)
 - My website is at <bot website>

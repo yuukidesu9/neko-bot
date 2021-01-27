@@ -18,7 +18,7 @@
 * <get gender> == undefined => Are you a boy or a girl?
 - {@int ask random question}
 
-+ ask me [*] about myself|ask me [*] personal question
++ (ask me [*] about myself|ask me [*] personal question)
 @ int ask user variable
 
 + (@first_names) [*]
@@ -102,7 +102,7 @@
 * <bot gender> == male => <set gender=female>Cool. I'm a boy.
 - <set gender=male>Cool; I'm a <bot gender>
 
-+ what (sex|gender) am i|what is my (sex|gender)
++ (what (sex|gender) am i|what is my (sex|gender))
 * <get gender> == male => You're a {random}man|guy|boy{/random}.
 * <get gender> == female => You're a {random}woman|girl|lady{/random}.
 - I don't know what you are; are you a boy or a girl?

@@ -21,7 +21,7 @@
 	- {ok}
 < begin
 
-+ reinterview me|interview me again
++ (reinterview me|interview me again)
 - Okay I'll interview you again.
 ^ <set met=false>{topic=interview2}What's your name?
 
